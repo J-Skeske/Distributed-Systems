@@ -1,3 +1,4 @@
+--Simple TCP clinet written in Haskell
 import Network
 import System.IO
 import System.Environment (getArgs)
