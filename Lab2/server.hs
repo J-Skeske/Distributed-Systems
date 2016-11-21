@@ -83,7 +83,7 @@ talk h port host s sem= do
     line <- hGetLine h     
     case head $ words line of                                   -- Each iteration of the loop reads a new line of text.
       "HELO" -> hPutStr h ("HELO BASE_TEST\n" ++ "IP:10.62.0.235\n" ++ "Port:8080\n" ++ "StudentID:12301561\n")
-      "KILL_SERVICE" ->hPutStr h "Closing server\n" >> sClose s
+      "KILL_SERVICE" ->hPutStr h "Terminating server...\n" >> sClose s >> exitSuccess
       _ -> hPutStr h "im still a skeleton\n" 
     hFlush h
     signalSemaphore sem
