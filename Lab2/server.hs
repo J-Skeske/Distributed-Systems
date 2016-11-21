@@ -28,7 +28,7 @@ talk h port host s= do
 
 helo :: Handle -> IO()
 helo h = do
-  hPutStr h ("HELO BASE_TEXT\n" ++ "IP:10.62.0.235\n" ++ "Port:8080\n" ++ "StudentID:12301561\n" )
+  hPutStr h ("HELO BASE_TEST\n" ++ "IP:10.62.0.235\n" ++ "Port:8080\n" ++ "StudentID:12301561\n" )
   hFlush h
 
 going :: Handle -> IO()
